@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--输出日志到控制台
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+-->
+    <typeAliases>
+        <!--name:实体类所在的包名-->
+        <package name="com.bjpowernode.domain"/>
+    </typeAliases>
+
+    <mappers>
+        <!--告诉 mybatis 要执行的 sql 映射文件的位置-->
+        <!--name：是包名，这个包中的所有mapper.xml一次都能加载
+        mapper文件名称和dao接口名必须完全一样，且在同一目录
+        -->
+        <package name="com.bjpowernode.dao"/>
+    </mappers>
+</configuration>
